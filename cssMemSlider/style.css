@@ -17,17 +17,14 @@ input {
   overflow: hidden;
 }
 
-.slides {
-  width: 400%;
+.slides_container {
   display: flex;
-  margin: 1rem auto;
-  min-height: 100%;
+  width: 400%;
 }
 
 .slide {
   width: 25%;
   transition: all .6s ease;
-  min-height: 100%;
 }
 
 .slide img {
@@ -35,10 +32,27 @@ input {
   min-height: 100%;
 }
 
-.navigation {
-  bottom: 0px;
+.nav_text {
+  margin-top: 1rem;
   display: flex;
-  gap: 10px;
+  justify-content: space-between;
+}
+
+.text_box {
+  display: flex;
+  transition: all .6s ease;
+  overflow: hidden;
+}
+
+.text {
+  min-width: 100%;
+  min-height: 100%;
+  transition: all .6s ease;
+}
+
+.navigation {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .btn_area {
@@ -65,29 +79,41 @@ input {
   background-color: #7BBBD6;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-#r1:checked ~ .s1 {
+#r1:checked ~ .slides_container .s1{
   margin-left: 0;
 }
-#r2:checked ~ .s1 {
+#r2:checked ~ .slides_container .s1 {
   margin-left: -25%;
 }
-#r3:checked ~ .s1 {
+#r3:checked ~ .slides_container .s1 {
   margin-left: -50%;
 }
-#r4:checked ~ .s1 {
+#r4:checked ~ .slides_container .s1 {
   margin-left: -75%;
 }
 
+#r1:checked ~ .nav_text .navigation #btn1 .btn {
+  background-color: #F38A8A;
+}
+#r2:checked ~ .nav_text .navigation #btn2 .btn {
+  background-color: #F38A8A;
+}
+#r3:checked ~ .nav_text .navigation #btn3 .btn {
+  background-color: #F38A8A;
+}
+#r4:checked ~ .nav_text .navigation #btn4 .btn {
+  background-color: #F38A8A;
+}
+
+#r1:checked ~ .nav_text .text_box  .t1{
+  margin-left: 0;
+}
+#r2:checked ~ .nav_text .text_box  .t1 {
+  margin-left: -100%;
+}
+#r3:checked ~ .nav_text .text_box  .t1 {
+  margin-left: -200%;
+}
+#r4:checked ~ .nav_text .text_box  .t1 {
+  margin-left: -300%; 
+}
