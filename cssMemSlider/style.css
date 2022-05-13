@@ -64,12 +64,16 @@ input {
 }
 
 .btn {
-  width: 1rem;
-  height: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   background-color:#0F595E;
   border-radius: 50%;
   margin: auto auto;
   transition: all .3s ease;
+}
+
+.text {
+  text-align: justify;
 }
 
 .btn_area:hover .btn {
@@ -115,5 +119,21 @@ input {
   margin-left: -200%;
 }
 #r4:checked ~ .nav_text .text_box  .t1 {
-  margin-left: -300%; 
+  margin-left: -300%;
+}
+
+@media (max-width: 999px) {
+
+  .nav_text {
+    flex-direction: column-reverse;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+
+  .text {
+    text-align: center;
+    margin-top: 1rem;
+  }
 }
