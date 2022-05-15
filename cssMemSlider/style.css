@@ -48,7 +48,7 @@ input {
 .text {
   min-width: 100%;
   transition: .6s;
-  font-size: 24px;
+  font-size: 1.6rem;
 }
 
 .navigation {
