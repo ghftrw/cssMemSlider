@@ -1,0 +1,139 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(./images/bg1.jpg);
+}
+
+input {
+  display: none;
+}
+
+.container {
+  margin: 5vh auto;
+  width: 60vw;
+  overflow: hidden;
+  background-color: rgb(100%, 100%, 100%, 0.9);
+  border-radius: 1vw;
+}
+
+.slides_container {
+  display: flex;
+  width: 400%;
+}
+
+.slide {
+  width: 25%;
+  transition: all .6s ease;
+}
+
+.slide img {
+  width: 100%;
+  min-height: 100%;
+}
+
+.nav_text {
+  display: flex;
+}
+
+.text_box {
+  display: flex;
+  transition: .6s;
+  overflow: hidden;
+  margin: 1rem;
+}
+
+.text {
+  min-width: 100%;
+  transition: .6s;
+  font-size: 1.6rem;
+}
+
+.navigation {
+  display: flex;
+  margin: 1rem;
+}
+
+.btn_area {
+  width: 1.7rem;
+  height: 1.7rem;
+  cursor: pointer;
+  display: flex;
+  transition: all .3s ease;
+}
+
+.btn {
+  width: 0.8rem;
+  height: 0.8rem;
+  background-color:#1A1A40;
+  border-radius: 50%;
+  margin: auto auto;
+  transition: all .3s ease;
+}
+
+.btn_area:hover .btn {
+  background-color: #655D99;
+}
+.btn_area:active .btn {
+  background-color: #798CAD;
+}
+
+#r1:checked ~ .slides_container .s1{
+  margin-left: 0;
+}
+#r2:checked ~ .slides_container .s1 {
+  margin-left: -25%;
+}
+#r3:checked ~ .slides_container .s1 {
+  margin-left: -50%;
+}
+#r4:checked ~ .slides_container .s1 {
+  margin-left: -75%;
+}
+
+#r1:checked ~ .nav_text .navigation #btn1 .btn {
+  background-color: #8D00D4;
+}
+#r2:checked ~ .nav_text .navigation #btn2 .btn {
+  background-color: #8D00D4;
+}
+#r3:checked ~ .nav_text .navigation #btn3 .btn {
+  background-color: #8D00D4;
+}
+#r4:checked ~ .nav_text .navigation #btn4 .btn {
+  background-color: #8D00D4;
+}
+
+#r1:checked ~ .nav_text .text_box  .t1{
+  margin-left: 0;
+}
+#r2:checked ~ .nav_text .text_box  .t1 {
+  margin-left: -100%;
+}
+#r3:checked ~ .nav_text .text_box  .t1 {
+  margin-left: -200%;
+}
+#r4:checked ~ .nav_text .text_box  .t1 {
+  margin-left: -300%;
+}
+
+@media (max-width: 999px) {
+
+  .nav_text {
+    flex-direction: column-reverse;
+  }
+
+  .navigation {
+    justify-content: center;
+  }
+
+  .text_box {
+    margin-top: 0;
+  }
+
+  .text {
+    text-align: center;
+  }
+}
